@@ -4,7 +4,6 @@ import data from "./data";
 
 export default function App() {
   const [getSelectedId, setSelectedId] = useState(null);
-  const [multiple, setMultiple] = useState([]);
 
   function handleSelectedItem(id) {
     console.log(id);
@@ -24,13 +23,11 @@ export default function App() {
               </div>
               <div className="">
                 {getSelectedId === dataItem.id && (
-                  <div className="mb-4 mx-4 text-justify">{dataItem.answer}</div>
+                  <div className="mb-4 mx-4 text-justify">
+                    {dataItem.answer}
+                  </div>
                 )}
               </div>
-              {/* {selected === dataItem.id ||
-              multiple.indexOf(dataItem.id) !== -1 ? (
-                <div className="content">{dataItem.answer}</div>
-              ) : null} */}
             </div>
           ))
         ) : (
